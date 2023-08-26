@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'plamona',
+  host: '${{ secrets.IP_BANCO }}',
+  user: '${{ secrets.USER_DO_BANCO }}',
+  password: '${{ secrets.SENHA_DO_BANCO }}',
+  database: 'geovanegri_plamona_v2',
 });
 
 connection.connect((error) => {
